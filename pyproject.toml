@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "peagent-analysis"
+version = "1.0.0"
+description = "Analysis code for PEAgent: sequence-to-single-cell modelling of plant chromatin accessibility and its regulatory grammar"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+# The `peagent` model package is released separately and must be installed
+# alongside this analysis code (see environment.yml / README).
+dependencies = ["peagent"]

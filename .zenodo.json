@@ -1,0 +1,17 @@
+{
+  "title": "PEAgent: analysis code for sequence-based modeling of plant epigenomes",
+  "description": "Analysis code accompanying \"Sequence-based modeling of plant epigenomes reveals cell-type-specific cis-regulatory grammar\" (under review). Trains per-species chromatin-accessibility CNNs across soybean, maize and rice and reads out the regulatory grammar of plant genomes (lexicon, co-occurrence, synergy, cross-species transfer, ACR evolution, variant effect).",
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "chromatin accessibility",
+    "single-cell ATAC-seq",
+    "deep learning",
+    "cis-regulatory grammar",
+    "comparative genomics"
+  ],
+  "creators": [
+    { "name": "Yao, Jie", "affiliation": "University of Georgia", "orcid": "0000-0002-7898-1799" }
+  ]
+}

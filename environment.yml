@@ -1,0 +1,25 @@
+name: peagent
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.8
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - h5py
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - pysam
+  - anndata
+  - scanpy
+  - leidenalg
+  - pip:
+      - tensorflow==2.11.*
+      - modisco-lite
+      - finemo-gpu
+      - tangermeme
+      # the PEAgent model package (released separately)
+      - peagent

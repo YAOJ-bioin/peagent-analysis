@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated paper below."
+title: "PEAgent: analysis code for sequence-based modeling of plant epigenomes"
+version: 1.0.0
+date-released: 2026-07-22
+license: MIT
+authors:
+  - family-names: "Yao"
+    given-names: "Jie"
+    email: "jy16611@uga.edu"
+    affiliation: "University of Georgia"
+    orcid: "https://orcid.org/0000-0002-7898-1799"
+repository-code: "https://github.com/YAOJ-bioin/peagent-analysis"
+keywords:
+  - chromatin accessibility
+  - single-cell ATAC-seq
+  - deep learning
+  - cis-regulatory grammar
+  - comparative genomics
+preferred-citation:
+  type: article
+  title: "Sequence-based modeling of plant epigenomes reveals cell-type-specific cis-regulatory grammar"
+  year: 2026
+  notes: "Under review"
+  authors:
+    - family-names: "Yao"
+      given-names: "Jie"
+      affiliation: "University of Georgia"
+      orcid: "https://orcid.org/0000-0002-7898-1799"
