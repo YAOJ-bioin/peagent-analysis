@@ -27,14 +27,15 @@ def main():
     ap.add_argument("--species", required=True, choices=SPECIES)
     ap.add_argument("--data", required=True, type=Path, help="preprocess output dir")
     ap.add_argument("--out", required=True, type=Path)
+    ap.add_argument("--model", type=Path, help="override config model (e.g. a freshly trained one)")
     args = ap.parse_args()
     cfg = SPECIES[args.species]
 
     seqs = h5py.File(args.data / "test_seqs.h5", "r")["X"][:]
-    test_idx = np.load(args.data / "peak_index.npy")            # ACR ids of test peaks
+    test_idx = np.load(args.data / "test_peak_index.npy")       # ACR ids of test peaks
     atlas = ad.read_h5ad(cfg["atlas_h5ad"])
 
-    model = load_model(cfg["model"], cfg["n_cells"])
+    model = load_model(args.model or cfg["model"], cfg["n_cells"])
     groups = cell_groups(atlas, cfg, MIN_CELLS_PER_GROUP)
     pred = group_pred(predict(model, seqs), groups)            # groups x peaks
     _, obs = pseudobulk_truth(atlas[:, test_idx], groups)      # groups x peaks (binary)

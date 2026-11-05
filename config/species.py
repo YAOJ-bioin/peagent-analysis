@@ -60,4 +60,13 @@ SPECIES = {
         "annotation_col": "Final_annotation_TCP_up", "annotation_sep": ".",
         "n_cells": 104_029, "n_acrs": 128_764, "n_tissues": 9,
     },
+    # simulated mini-atlas shipped in demo/ (PEAGENT_DATA_ROOT=demo/data)
+    "demo": {
+        **_paths("demo"),
+        "assembly": "simulated",
+        "chrom_regex": r"^chr\d+$",
+        "tissue_col": "tissue", "celltype_col": "celltype", "rep_col": "replicate",
+        "annotation_col": None, "annotation_sep": None,
+        "n_cells": 240, "n_acrs": 1_200, "n_tissues": 2,
+    },
 }

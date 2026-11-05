@@ -1,6 +1,3 @@
-# The peagent package is released separately, not vendored in this repo
-/peagent/
-
 # Python
 __pycache__/
 *.py[cod]
@@ -32,3 +29,8 @@ results/
 
 # OS
 .DS_Store
+
+# Demo outputs; keep the simulated demo dataset
+demo_output/
+!demo/data/
+!demo/data/**

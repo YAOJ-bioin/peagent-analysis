@@ -61,6 +61,7 @@ def main():
             f["X"] = seqs[ids]
         sparse.save_npz(args.out / f"m_{name}.npz", m[ids].tocsr())
     np.save(args.out / "peak_index.npy", keep)
+    np.save(args.out / "test_peak_index.npy", keep[te])     # atlas ACR ids of test_seqs.h5
     print(f"{args.species}: {len(keep)} ACRs -> train {len(tr)} / val {len(va)} / test {len(te)}")
 
 
